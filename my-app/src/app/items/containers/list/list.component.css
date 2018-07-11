@@ -1,0 +1,47 @@
+
+
+
+
+/**
+* penser à l'utilisation des rem (taille par défault de la balise font-size html) pour la proportionnalité du responsive par exemple, à utiliser pour la font-size ou encore les margins
+* à ne pas confondre avec un em qui représente la taille de la typo du parent
+
+* par défaut, un margin sur un élément (type h1, h2, p..) est égal à la font-size de l'élément
+
+* penser à utiliser des variables pour les différents fichiers css (mixin, $variable...)
+*/
+
+/* [class*="col-"] {
+  padding-left: 1rem;
+  padding-right: 1rem;
+} */
+
+/* h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 17px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 19px;
+  }
+} */
