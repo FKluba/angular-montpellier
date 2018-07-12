@@ -1,0 +1,25 @@
+<!-- l'attribut novalidate indique au navigateur qu'il ne doit pas effectuer sa propre validation des champs sur le form -->
+<form class="container form" novalidate #form="ngForm" (ngSubmit)="process()">
+
+  <div class="form-group">
+    <input #nom="ngModel" [(ngModel)]="newItem.name" name="name" type="text" class="form-control" placeholder="Enter name" required minlength="5">
+    <!-- {{newItem.name}} -->
+    <div class="alert alert-danger" *ngIf="nom.invalid && nom.touched"> Champs invalide !</div>
+  </div>
+
+  <div class="form-group">
+    <input #ref="ngModel" [(ngModel)]="newItem.reference" name="reference" type="text" class="form-control" placeholder="Enter ref. ex:1234" required minlength="4">
+    <div class="alert alert-danger" *ngIf="ref.invalid && ref.touched"> Champs invalide !</div>
+  </div>
+
+  <div class="form-group">
+    <select class="form-control" [(ngModel)]="newItem.state" name="state">
+      <option *ngFor="let state of listStates" [ngValue]="state"> {{ state }} </option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Valider</button>
+  </div>
+
+</form>
