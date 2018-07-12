@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 import { State } from '../../enums/state.enum';
 import { Item } from '../../interfaces/item';
 
@@ -11,6 +12,7 @@ export class FormComponent implements OnInit {
   // On ne peut pas boucler sur une enum donc on en fait un tableau
   public listStates = Object.values(State);
   public newItem: Item;
+  @Output() newElement: EventEmitter<Item> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -22,12 +24,14 @@ export class FormComponent implements OnInit {
       id: '',
       name: '',
       reference: '',
-      state: State.ALIVRER
+      state: State.ALIVRER,
+      dateLivraison: new Date()
     };
   }
 
   public process(): void {
-    console.log(this.newItem);
+    this.newElement.emit(this.newItem);
+    this.initItem();
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Item } from '../../../shared/interfaces/item';
 import { State } from '../../../shared/enums/state.enum';
+import { CollectionService } from '../../../core/services/collection.service';
 
 @Component({
   selector: 'app-item',
@@ -11,7 +12,7 @@ export class ItemComponent implements OnInit {
   @Input() item: Item;
   public state = State;
   // decorator permettant de récupérer une donnée d'un component parent
-  constructor() { }
+  constructor(private collectionService: CollectionService) { }
 
   ngOnInit() {
   }
@@ -26,8 +27,13 @@ export class ItemComponent implements OnInit {
     // });
 
     this.item.state = etat;
+    this.collectionService.update(this.item);
 
     // todo: utiliser la méthode update de collectionService pour persister les données
+  }
+
+  public delete(): void {
+    this.collectionService.delete(this.item);
   }
 
 }

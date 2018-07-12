@@ -6,11 +6,12 @@ import { ItemComponent } from './components/item/item.component';
 import { ItemsRoutingModule } from './items-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { AddComponent } from './containers/add/add.component';
+import { AddReactiveComponent } from './container/add-reactive/add-reactive.component';
 
 @NgModule({
   imports: [
     CommonModule, SharedModule, ItemsRoutingModule
   ],
-  declarations: [ListComponent, ItemComponent, AddComponent]
+  declarations: [ListComponent, ItemComponent, AddComponent, AddReactiveComponent]
 })
 export class ItemsModule { }

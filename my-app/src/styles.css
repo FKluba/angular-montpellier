@@ -13,3 +13,14 @@
 .state-livree {
   color: rgb(86, 194, 53)
 }
+
+.form .ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.form .ng-valid.ng-touched {
+  border: 1px solid rgb(70, 218, 51);
+}
+
+[class*="icon"] {
+  margin-left: 10px;
+}

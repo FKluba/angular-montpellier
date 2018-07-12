@@ -10,6 +10,8 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    const date = (new Date(2018, 7, 12));
+    console.log(date);
   }
 
 }

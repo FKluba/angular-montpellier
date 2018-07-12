@@ -1,0 +1,97 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M965.536 241.344l-10.048 10.048-183.232-183.328 10.016-10.016c0 0 43.872-58.016 106.272-58.016 27.488 0 58.624 11.296 91.168 43.84 107.328 107.328-14.176 197.472-14.176 197.472zM895.328 311.584l-623.968 624.192-271.36 88.224 88.192-271.52v-0.096h0.064l623.872-624.16 8.064 8.096M88.32 935.648l135.584-39.008-92.608-98.624-42.976 137.632z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "pencil",
+          "write",
+          "blog",
+          "save",
+          "note"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "id": 16,
+        "order": 13,
+        "prevSize": 32,
+        "code": 59648,
+        "name": "pencil"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 15
+    },
+    {
+      "icon": {
+        "paths": [
+          "M672 896c17.696 0 32-14.304 32-32v-448c0-17.696-14.304-32-32-32s-32 14.304-32 32v448c0 17.696 14.304 32 32 32zM352 896c17.664 0 32-14.304 32-32v-448c0-17.696-14.336-32-32-32s-32 14.304-32 32v448c0 17.696 14.336 32 32 32zM928 192h-128v-64c0-70.688-57.312-128-128-128h-320c-70.688 0-128 57.312-128 128v64h-128l-96 96c0 17.696 14.336 32 32 32h96v640c0 35.328 28.672 64 64 64h640c35.328 0 64-28.672 64-64v-640h96c17.696 0 32-14.304 32-32l-96-96zM320 128c0-35.328 28.672-64 64-64h256c35.328 0 64 28.672 64 64v64h-384v-64zM832 928c0 17.696-14.304 32-32 32h-576c-17.664 0-32-14.304-32-32v-608h640v608zM512 896c17.696 0 32-14.304 32-32v-448c0-17.696-14.304-32-32-32s-32 14.304-32 32v448c0 17.696 14.304 32 32 32z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "trashcan",
+          "garbage",
+          "delete",
+          "remove",
+          "bin",
+          "uninstall"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "id": 75,
+        "order": 14,
+        "prevSize": 32,
+        "code": 59649,
+        "name": "trashcan"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 74
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "icomoon"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon"
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}

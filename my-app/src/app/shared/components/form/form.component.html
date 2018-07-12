@@ -19,6 +19,11 @@
   </div>
 
   <div class="form-group">
+      <input #date="ngModel" [(ngModel)]="newItem.dateLivraison" name="dateLivraison" type="date" class="form-control" placeholder="Enter ref. ex:1234">
+      <div class="alert alert-danger" *ngIf="date.invalid && date.touched"> Champs invalide !</div>
+    </div>
+
+  <div class="form-group">
     <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Valider</button>
   </div>
 

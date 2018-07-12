@@ -5,10 +5,14 @@
     <span class="state-encours" *ngIf="state.ENCOURS === item.state">{{item.state}}</span>
     <span class="state-livree" *ngIf="state.LIVREE === item.state">{{item.state}}</span> -->
     <span [appState]="item.state">{{item.state}}</span>
+    <button class="btn btn-sm btn-danger icon-trashcan float-right" (click)="delete()"></button>
+    <button class="btn btn-sm btn-info icon-pencil float-right"></button>
   </div>
   <div class="card-body">
     <h5 class="card-title">Name : {{item.name}}</h5>
     <p class="card-text">Ref : {{item.reference}}</p>
+    <p class="card-text">Date de livraison : {{item.dateLivraison | date:'fullDate'}}</p>
+
     <button (click)="changeState(state.ENCOURS)" *ngIf="state.ALIVRER === item.state" class="btn-sm btn-primary">{{state.ENCOURS}}</button>
     <button (click)="changeState(state.LIVREE)" *ngIf="state.ENCOURS === item.state" class="btn-sm btn-primary">{{state.LIVREE}}</button>
   </div>
