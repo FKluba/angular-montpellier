@@ -9,6 +9,7 @@ import { Observable, Subscription } from 'rxjs';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit, OnDestroy  {
+  private itemsCollection: Observable<Item>;
   public collection: Observable<Item[]>;
   // public collection: Item[];
   // private sub: Subscription;

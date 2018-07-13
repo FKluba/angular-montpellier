@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 import { State } from '../../enums/state.enum';
 import { Item } from '../../interfaces/item';
@@ -13,6 +13,7 @@ export class FormComponent implements OnInit {
   public listStates = Object.values(State);
   public newItem: Item;
   @Output() newElement: EventEmitter<Item> = new EventEmitter();
+  // @Input() item: ;
   constructor() { }
 
   ngOnInit() {

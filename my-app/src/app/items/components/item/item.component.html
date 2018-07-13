@@ -6,7 +6,7 @@
     <span class="state-livree" *ngIf="state.LIVREE === item.state">{{item.state}}</span> -->
     <span [appState]="item.state">{{item.state}}</span>
     <button class="btn btn-sm btn-danger icon-trashcan float-right" (click)="delete()"></button>
-    <button class="btn btn-sm btn-info icon-pencil float-right"></button>
+    <button class="btn btn-sm btn-info icon-pencil float-right" (click)="edit()"></button>
   </div>
   <div class="card-body">
     <h5 class="card-title">Name : {{item.name}}</h5>

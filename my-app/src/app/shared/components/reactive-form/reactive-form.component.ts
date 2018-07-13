@@ -1,8 +1,9 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { Item } from '../../interfaces/item';
 import { State } from '../../enums/state.enum';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-reactive-form',
@@ -13,11 +14,15 @@ export class ReactiveFormComponent implements OnInit {
   public listStates = Object.values(State);
   public form: FormGroup;
   @Output() newCmd: EventEmitter<Item> = new EventEmitter();
+  @Input() edit$: Subject<Item>;
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
     this.createForm();
+    this.edit$.subscribe((data) => {
+      this.form.get('name').setValue(data.name);
+    });
   }
 
   public process(): void {
@@ -26,10 +31,10 @@ export class ReactiveFormComponent implements OnInit {
     this.form.get('state').setValue(State.ALIVRER);
   }
 
-  private createForm() {
+  private createForm(data?: Item) {
     this.form = this.fb.group({
       name: [
-        '',
+        data ? data.name : '',
         Validators.compose([Validators.required, Validators.minLength(5)])
       ],
       reference: [

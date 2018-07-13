@@ -24,3 +24,16 @@
 [class*="icon"] {
   margin-left: 10px;
 }
+
+.tab {
+  margin-top: 1rem;
+}
+.tab li {
+  cursor: pointer;
+}
+.tab li:nth-child(odd) {
+  background: rgb(236, 236, 236);
+}
+.tab li:hover {
+  background: rgb(216, 207, 207);
+}
